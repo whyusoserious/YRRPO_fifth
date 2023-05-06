@@ -52,7 +52,7 @@ def dec_to_hex(num):
     return hexa
 
 def convert(num):
-    """Converts a number to decimal and then to the desired system."""
+    """Converts a number to decimal and then to the desired system"""
     if num.isdigit():
         decimal = int(num)
     elif num.isalpha() and all(c in "0123456789ABCDEFabcdef" for c in num):
