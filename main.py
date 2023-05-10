@@ -5,12 +5,14 @@ def bin_to_dec(num):
         decimal += int(num[i]) * 2**(len(num)-1-i)
     return decimal
 
+
 def oct_to_dec(num):
     """Converts an octal number to decimal."""
     decimal = 0
     for i in range(len(num)):
         decimal += int(num[i]) * 8**(len(num)-1-i)
     return decimal
+
 
 def hex_to_dec(num):
     """Converts a hexadecimal number to decimal."""
@@ -22,6 +24,7 @@ def hex_to_dec(num):
             decimal += (ord(num[i])-55) * 16**(len(num)-1-i)
     return decimal
 
+
 def dec_to_bin(num):
     """Converts a decimal number to binary."""
     binary = ""
@@ -30,6 +33,7 @@ def dec_to_bin(num):
         num //= 2
     return binary
 
+
 def dec_to_oct(num):
     """Converts a decimal number to octal."""
     octal = ""
@@ -37,6 +41,7 @@ def dec_to_oct(num):
         octal = str(num % 8) + octal
         num //= 8
     return octal
+
 
 def dec_to_hex(num):
     """Converts a decimal number to hexadecimal."""
@@ -50,6 +55,7 @@ def dec_to_hex(num):
             hexa = str(remainder) + hexa
         num //= 16
     return hexa
+
 
 def convert(num):
     """Converts a number to decimal and then to the desired system/"""
@@ -67,6 +73,8 @@ def convert(num):
     print("Octal representation:", dec_to_oct(decimal))
     print("Hexadecimal representation:", dec_to_hex(decimal))
 
+
 if __name__ == "__main__":
-    num = input("Enter a number in binary, octal, decimal, or hexadecimal format: ")
+    num = input("Enter a number in binary, "
+                "octal, decimal, or hexadecimal format: ")
     convert(num)
